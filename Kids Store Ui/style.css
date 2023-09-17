@@ -1,0 +1,75 @@
+.top-navbar{
+    --mask: 
+      linear-gradient(to top,#0000 30px,#000 0),
+      radial-gradient(30px,#000 98%,#0000) bottom/55.50px 60px;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+  .box {
+    --mask:
+      radial-gradient(89.91px at 50% calc(100% - 126.85px),#000 99%,#0000 101%) calc(50% - 118px) 0/236px 100%,
+      radial-gradient(89.91px at 50% calc(100% + 67.85px),#0000 99%,#000 101%) 50% calc(100% - 59px)/236px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+  h3{
+    font-family: 'Rubik Spray Paint', cursive;
+    font-weight: 100;
+  }
+/* a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+  } */
+  .overlay{
+    width: 90%;
+    height: 80px; 
+    /* background-color: #79bcf3; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+opacity: 0;
+z-index: 99;
+  }
+  .card{
+    position: relative;
+  
+  }
+  .card a{
+    text-decoration: none;
+    color: white;
+  }
+  .card:hover .overlay{
+    opacity: 1;
+  }
+  .icon{
+    width: 42px;
+     height: 42px;
+     background-color: #F379A7;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+
+  .icon:hover{
+    background-color: #96B3E0;
+  }
+
+
+  /* border top bottom */
+  .box2 {
+    --mask:
+      radial-gradient(84.12px at 50% 114.00px,#000 99%,#0000 101%) calc(50% - 80px) 0/160px 51% repeat-x,
+      radial-gradient(84.12px at 50% -74px,#0000 99%,#000 101%) 50% 40px/160px calc(51% - 40px) repeat-x,
+      radial-gradient(84.12px at 50% calc(100% - 114.00px),#000 99%,#0000 101%) calc(50% - 80px) 100%/160px 51% repeat-x,
+      radial-gradient(84.12px at 50% calc(100% + 74.00px),#0000 99%,#000 101%) 50% calc(100% - 40px)/160px calc(51% - 40px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+
+  .box-icon {
+    width: 200px;
+    aspect-ratio: 1;
+    clip-path: polygon(93.30% 75.00%,67.68% 67.68%,75.00% 93.30%,56.47% 74.15%,50.00% 100.00%,43.53% 74.15%,25.00% 93.30%,32.32% 67.68%,6.70% 75.00%,25.85% 56.47%,0.00% 50.00%,25.85% 43.53%,6.70% 25.00%,32.32% 32.32%,25.00% 6.70%,43.53% 25.85%,50.00% 0.00%,56.47% 25.85%,75.00% 6.70%,67.68% 32.32%,93.30% 25.00%,74.15% 43.53%,100.00% 50.00%,74.15% 56.47%);
+  }

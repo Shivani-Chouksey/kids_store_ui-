@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        body {
+            /* background: #000; */
+            color: #000;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mySwiper2 {
+            height: 450px;
+            width: 100%;
+        }
+
+        .mySwiper {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .like-btn:hover {
+            color: #fff !important;
+            background-color: #FF383F !important;
+            scale: 1.04 !important;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        }
+
+        #pills-tab .active {
+            background-color: #F379A7;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="sticky-top">
+        <nav class="navbar d-none sticky-top  d-md-block navbar-expand-lg px-3 py-1"
+            style="background-color: white; font-size: 0.9vw">
+            <div class="container-fluid">
+                <p class="fs-6">Free Returns and Free Shipping</p>
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>  -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active  fs-6" aria-current="page" href="#"><i
+                                    class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  fs-6" href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  fs-6" href="#"><i class="bi bi-youtube"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  fs-6" href="#"><i class="bi bi-whatsapp"></i></a>
+                        </li>
+                    </ul>
+                    <a class="text-decoration-none text-dark fs-6" href=""><i
+                            class="bi bi-telephone-fill me-2"></i>6267184045</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar sticky-top navbar-expand-lg p-3 px-5 top-navbar" style="background-color:#ffffff">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="index.html"> <img height="80px" src="./image/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span style="color: white !important;" class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-md-5">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bolder" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" style="color: #F379A7;" href="shop.html">SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" href="Menu.html">MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" href="contact.html">CONTACTS</a>
+                        </li>
+
+                    </ul>
+                    <ul class=" navbar-nav gap-md-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="bi bi-search fs-4"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="bi bi-heart fs-4"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="bi bi-person-circle fs-4"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="bi bi-basket fs-4"></i></a>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    /> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">  -->
+                    <!-- <h5><a href="tel:+917440477473" class="  text-decoration-none text-white"> 7440477473</a></h5> -->
+                    <!-- </button> -->
+                    <!-- </form> -->
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    
+<section class="container " >
+    <div class="row my-5 ">
+        <div class="col-12 col-md-6 p-4">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/1.jpg"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/3.jpg" />
+                  </div>
+                 
+                
+                </div>
+                <div class="swiper-button-next text-dark"></div>
+                <div class="swiper-button-prev text-dark"></div>
+              </div>
+              <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/1.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://template.hasthemes.com/kidol/kidol/assets/img/shop/details/3.jpg" />
+                  </div>
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-md-6 p-4">
+          <h1 style="color: #444444;">Product Name</h1>
+          <p class="card-text" style="color:#F379A7;">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+        <span class="text-dark">(5 Customer review)</span>  </p>
+        <p class="mt-0">
+          <span class="fs-4 " style="color:#F379A7;" >₹150</span>
+          <span class="text-decoration-line-through">₹90</span>
+        </p>
+
+        
+        <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni labore ipsum quos deleniti eligendi facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, mollitia! Optio quod repellat rerum. Corporis.</p>
+     <div class="d-flex gap-3 mb-2">
+       <p><strong class="fs-5 fw-normal " style="color: #444444;">Categories :  </strong></p>
+       <div class="btn-group gap-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-secondary rounded" for="btnradio1">Toys</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-secondary rounded" for="btnradio2">Dress</label>
+      
+        <!-- <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-secondary rounded" for="btnradio3">LG</label> -->
+      </div>
+     </div>
+      <p><strong class="fs-5 fw-normal " style="color: #444444;">Tags :</strong><a class="btn btn-secondary-outline" href="#">  Boy</a> <a class="text-decoration-none text-black-50" href="#">Girl</a></p>
+      <div class="d-flex my-4 gap-3" style="align-items: center;"><strong class="fs-5 fw-normal " style="color: #444444;">Quantity :      </strong>
+        <div class="btn-group border " role="group" aria-label="Basic mixed styles example">
+          <button type="button" id="plus" class="btn icon border"><i class="bi bi-plus-lg  "></i></button>
+          <button type="button" id="num" class="btn border">1</button>
+          <button type="button" id="minus" class="btn icon border"><i class="bi bi-dash"></i></button>
+        </div> </div>
+      <div>
+        <a href="" class="btn text-white px-3 me-3 add-to-cart" style="background-color: #F379A7">Add to Cart</a>
+        <i class="bi bi-heart btn border  like-btn" ></i>
+
+      </div>
+<div>
+    <p class="mt-3"><strong class="fs-5 fw-normal " style="color: #444444;">Share :</strong> <i class="bi bi-instagram fs-4 text-muted ms-3 "></i><i class="bi bi-facebook mx-3  fs-4 text-muted "></i><i class="bi bi-whatsapp  fs-4 text-muted "></i></p>
+
+</div>
+<a href="" class="btn text-white px-5 me-3 add-to-cart" style="background-color: #F379A7;">Buy now</a>
+
+    </div>
+    </div>
+</section>
+    <section class="container py-5">
+        <ul class="nav nav-pills gap-4 mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item " role="presentation">
+                <button class="nav-link active border rounded-pill px-5  text-dark fw-bolder" id="pills-home-tab"
+                    data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Information</button>
+            </li>
+            <li class="nav-item " role="presentation">
+                <button class="nav-link border rounded-pill px-5 text-dark fw-bolder" id="pills-profile-tab"
+                    data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">Review(2)</button>
+            </li>
+            <li class="nav-item " role="presentation">
+                <button class="nav-link rounded-pill border px-5 text-dark fw-bolder" id="pills-contact-tab"
+                    data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                    aria-controls="pills-contact" aria-selected="false">Description</button>
+            </li>
+
+        </ul>
+        <div class="tab-content border " id="pills-tabContent">
+            <div class="tab-pane fade show active p-5" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+                tabindex="0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo in quisquam recusandae quaerat harum
+                    cumque ratione accusamus expedita quasi ab similique nobis ducimus, esse delectus est repellendus
+                    praesentium eaque voluptatum quia obcaecati. Voluptates qui magni similique accusantium voluptate ut
+                    natus.<br><br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum hic officiis
+                    ullam ad veritatis reprehenderit iste, aperiam repellat commodi atque nam, eligendi quisquam alias
+                    molestias totam quaerat voluptas pariatur, esse velit labore maxime vitae nemo. Veniam eos rerum quo
+                    vitae.</p>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                tabindex="0">
+
+                <div class="border-bottom px-5 py-3">
+                    <p style="color: #F379A7; margin: 0;"> <i class="bi bi-star-fill"> </i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                    <h4>chouksey</h4>
+                    <i class="text-black-50">chouksey on Date: 08/08/2023</i>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa impedit saepe cum, laudantium
+                        corporis nostrum!</p>
+                </div>
+                <div class="border-bottom px-5 py-3">
+                    <p style="color: #F379A7; margin: 0;"> <i class="bi bi-star-fill"> </i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </p>
+                    <h4>chouksey</h4>
+                    <i class="text-black-50">chouksey on Date: 08/08/2023</i>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa impedit saepe cum, laudantium
+                        corporis nostrum!</p>
+                </div>
+                <h3 class="text-center py-4">Write Your Review</h3>
+                <form action="" class="col-7 ms-auto me-auto pt-3 pb-5">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Enter Your Name :</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Enter Your Name">
+                    </div>
+                    <p class="card-text" style="color:#F379A7;"><span class="text-dark">Rating :</span>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </p>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Enter Review :</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <input type="submit" class="btn add-to-cart"
+                        style="background-color:#F379A7 !important;color: #fff !important;">
+                </form>
+            </div>
+            <div class="tab-pane fade p-5" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                tabindex="0">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugit, nam autem unde earum ducimus
+                    quas molestiae ut odit? Facilis adipisci inventore ex ratione ipsa? Iste fugiat omnis optio
+                    reiciendis.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 d-flex px-5 lh-1 align-content-center justify-content-center">
+                <div><img class="me-3" src="./image//truck.webp" alt="" /></div>
+                <div>
+                    <h5>Free Delivery</h5>
+                    <p class="">Above 1000/-</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex px-5 lh-1 align-content-center justify-content-center">
+                <div>
+                    <img class="me-3" src="https://img.icons8.com/?size=1x&id=24730&format=png" alt="" />
+                </div>
+                <div>
+                    <h5>Quality Product</h5>
+                    <p class="">Above 1000/-</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex px-5 lh-1 align-content-center justify-content-center">
+                <div>
+                    <img class="me-3" src="https://img.icons8.com/?size=1x&id=2889&format=png" alt="" />
+                </div>
+                <div>
+                    <h5>5 Days Return</h5>
+                    <p class="">Above 1000/-</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 d-flex px-5 lh-1 align-content-center justify-content-center">
+                <div>
+                    <img style="margin-top: -17px" class="me-3"
+                        src="https://img.icons8.com/?size=1x&id=neBRkBaejCVJ&format=png" alt="" />
+                </div>
+                <div>
+                    <h5>24 Support</h5>
+                    <p class="">Above 1000/-</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="w-100" style="background-color: #4a4c4e;">
+        <div class="container pb-5 border-bottom border-opacity-10">
+            <div class="row mx-auto">
+                <div class="col-md-3 mb-4">
+                    <img width="220px" src="./image/logo.png" alt="">
+                    <p class="p-0 text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+                        esse earum laudantium rerum distinctio ab.</p>
+                    <p></p>
+                </div>
+                <div class="col-md-3 text-white">
+                    <h4 class="my-5 ">Other Pages</h4>
+
+                    <h6> <a class="text-white text-decoration-none " href="">Shop</a></h6>
+                    <h6> <a class="text-white text-decoration-none" href="">Home</a></h6>
+                    <h6> <a class="text-white text-decoration-none" href="">Contact</a></h6>
+
+
+                </div>
+                <div class="col-md-3 text-white">
+                    <h4 class="my-5">Store Information</h4>
+                    <h6><i class="bi bi-geo-alt-fill me-2" style="color: #53bdea;"></i>bhopal</h6>
+                    <h6><i class="bi bi-envelope-fill me-2" style="color: #53bdea;"></i><a class="text-white"
+                            style="text-decoration: none;"
+                            href="mailto:shivanichouksey1702@gmail.com">shivanichouksey1702@gmail.com</a></h6>
+                    <h6><i class="bi bi-telephone-fill me-2" style="color: #53bdea;"></i><a class="text-white"
+                            style="text-decoration: none;" href="tel:917440477473">7440477473</a></h6>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="my-5 text-white">Gallery</h4>
+                    <div class="d-flex gap-2 mb-2">
+                        <div class="col-4" style=" overflow: hidden; scale: .6;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/3.webp" alt=""></div>
+                        <div class="col-4" style=" overflow: hidden;scale: .7;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/5.webp" alt=""></div>
+                        <div class="col-4" style=" overflow: hidden; scale: .7;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/2.webp" alt=""></div>
+
+                    </div>
+                    <div class="d-flex gap-2 mb-2">
+                        <div class="col-4" style=" overflow: hidden; scale: .6;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/3.webp" alt=""></div>
+                        <div class="col-4" style=" overflow: hidden;scale: .7;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/5.webp" alt=""></div>
+                        <div class="col-4" style=" overflow: hidden; scale: .7;"><img class="photo"
+                                style="width: 100%; height: 100%; object-fit: cover;" src="image/2.webp" alt=""></div>
+
+                    </div>
+                    <!-- <div class="d-flex gap-2">
+            <div class="col-4" style="height: 80px; width: 80px!important;overflow: hidden; "><img class="photo"
+                style="width: 100%; height: 100%; object-fit: cover;"
+                src="image/2.webp" alt=""></div>
+            <div class="col-4" style="height: 80px; width: 80px!important; overflow: hidden;"><img class="photo"
+                style="width: 100%; height: 100%; object-fit: cover;"
+                src="image/8.webp" alt=""></div>
+            <div class="col-4" style="height: 80px; width: 80px!important;overflow: hidden; "><img class="photo"
+                style="width: 100%; height: 100%; object-fit: cover;"
+                src="image/3.webp" alt=""></div>
+
+          </div> -->
+                </div>
+            </div>
+        </div>
+        <p class="text-center py-4 text-white"> Copyright © 2023 <span
+                style="color: #F379A7; font-weight: 900;">KIDS</span> Made With <span><i style="color: #F379A7;"
+                    class="bi bi-heart-fill "></i></span> by Shivani chouksey
+        </p>
+    </footer>
+    <button class="btn mb-5" id="btn"><i class="bi bi-arrow-up-circle text-white fs-3"></i></button>
+
+    <div class="row w-100 d-md-none fixed-bottom  bg-light">
+        <div class="col-4 text-center">
+            <a style="text-decoration: none;" class=" text-dark" href="index.html">
+                <i class="bi bi-house-door-fill icon"></i>
+                <p>Home</p>
+            </a>
+        </div>
+
+        <div class="col-4 text-center">
+            <a style="text-decoration: none;" class=" text-dark" href="Product.html">
+                <i class="ri-store-2-fill icon"></i>
+                <p>Products</p>
+            </a>
+
+        </div>
+        <!-- <div class="col-3 text-center">
+    <a style="text-decoration: none;" class=" text-dark" href="">
+      <i class="ri-shopping-cart-2-fill"></i>
+      <p>Cart</p>
+    </a>
+
+  </div> -->
+        <div class="col-4 text-center">
+            <a style="text-decoration: none;" class=" text-dark" href="contact.html"> <i
+                    class="ri-contacts-book-2-fill icon"></i>
+                <p>Contact</p>
+            </a>
+        </div>
+    </div>
+    <!-- <div id="footer" class="pt-5 pb-3 bg-dark mt-4">
+  <div class="row mx-5 py-3 px-5">
+    <div class="col-12 col-md-3">
+      <img src="" alt="Brand Logo" />
+      <p class="mt-4">Tagline</p>
+    </div>
+    <div class="col-12 col-md-3 text-start">
+      <h3 class="mb-4">Privacy Policy</h3>
+      <p class=""><a href="">Privacy Policy</a></p>
+
+      <p class=""><a href="">Terms And Conditions</a></p>
+
+      <p><a href="">Shipping Delivery Policy</a></p>
+
+      <p><a href="">Refund Policy</a></p>
+    </div>
+    <div class="col-12 col-md-3 text-start">
+      <h3 class="mb-4">Support</h3>
+      <p><a href="">Contact Us</a></p>
+
+      <p><a href="">Faqs</a></p>
+
+      <p><a href="">About</a></p>
+    </div>
+    <div class="col-12 col-md-3">
+      <h3 class="mb-4">Contact US</h3>
+      <p><i class="bi bi-geo-alt-fill me-2 fs-5"></i>bvhvbyhbvurebwuv3</p>
+      <p>
+        <i class="bi bi-telephone-fill me-2 fs-5"></i>
+        <a href="">7440477473</a>
+      </p>
+      <p>
+        <i class="bi bi-envelope-plus-fill me-2 fs-5"></i
+        ><a href="">bewhfefye@fbeh</a>
+      </p>
+    </div>
+  </div>
+  <div class="row w-100 mt-5 text-center ">
+    <div class="col-6 ">© 2023,Designed by Shivani Chouksey</div>
+    <div class="col-6"><img src="https://htmldemo.net/diana/diana/assets/img/icons/payment.webp" alt=""></div>
+  </div>
+</div> -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        //increment decrement button========================================
+        const plus = document.querySelector("#plus")
+        const minus = document.querySelector("#minus")
+        const num = document.querySelector("#num")
+        let a = 1;
+        plus.addEventListener("click", function () {
+            a++;
+            a = (a < 10) ? "0" + a : a;
+            num.innerText = a;
+        })
+
+        minus.addEventListener("click", function () {
+            if (a > 1) {
+                a--;
+                a = (a < 10) ? "0" + a : a;
+                num.innerText = a;
+            }
+        })
+
+        //swiper==================================
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
